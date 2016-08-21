@@ -1,172 +1,54 @@
-.banner-wrapper {
-  width: 100vw;
-}
-
-.total-wrapper {
-  position: relative;
-  height: 100%;
-  padding-bottom: 100px;
-}
-
-.banner {
-  width: 340px;
-  margin: 10px auto;
-}
-
-.banner a img {
-  width: 340px;
-  height: auto;
-}
-
-.nav {
-  position: absolute;
-  display: inline;
-  top: 20px;
-  right: 30px;
-  a {
-    padding: 0px 10px;
-    font-family: $raleway;
-    text-decoration: none;
-    color: $main;
-  }
-}
-
-.corner {
-  cursor: pointer;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  margin-top: -70px;
-  padding: 0;
-  border-top: 70px solid transparent;
-  border-bottom: 70px solid transparent;
-  border-left: 70px solid $main;
-  z-index: 9;
-  // transform: rotate(0deg);
-}
-.corner-icon {
-  cursor: pointer;
-  position: fixed;
-  top: 10px;
-  left: 12px;
-  color: white;
-  font-size: 20px;
-  font-weight: 500;
-  font-family: $raleway;
-  z-index: 10;
-}
-
-.loading {
-  color: $mgray;
-  font-family: $raleway;
-  font-size: 16px;
+.banner h1 {
   text-align: center;
 }
 
-.mobile-menu {
+input[type=radio] {
   display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  background-color: $lgray;
-  box-shadow: 0px 0px 2px $dgray;
-  z-index: 15;
-  .link-item {
-    position: absolute;
-    bottom: 7px;
-    color: $mgray;
-    font-size: 30px;
-    &[id="messagesbtn"] {
-      left: 25%;
-      transform: translateX(-50%);
-    }
-    &[id="homebtn"] {
-      left: 75%;
-      transform: translateX(-50%);
-    }
-    &:hover {
-      color: $dgray;
-    }
-  }
-  i {
-    position: absolute;
-    bottom: 24px;
-    left: 50%;
-    transform: translatex(-50%);
-    font-size: 24px;
-    color: white;
-    z-index: 17;
-    &[id="shoutbtn"] {
-      font-size: 22px;
-      font-family: $raleway;
-      font-style: normal;
-    }
-  }
-  .main-button-deactive {
-    pointer-events: none;
-    cursor: default;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    background-color: desaturate($main, 50);
-    width: 80px;
-    height: 80px;
-    z-index: 16;
-    border: 4px solid $lgray;
-    box-shadow: 0 0 0px 2px $mgray;
-    color: $mgray;
-  }
-  .main-button, input {
-    pointer-events: auto;
-    cursor: pointer;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    background-color: $main;
-    width: 80px;
-    height: 80px;
-    z-index: 16;
-    border: 4px solid $lgray;
-    box-shadow: 0 0 0px 2px $mgray;
-    color: white;
-    font-size: 24px;
-    transition: background-color 0.3s ease-in-out;
-    &:hover {
-      background-color: lighten($main, 5);
-      border: 4px solid $lgray;
-    }
-    &:focus {
-      outline: none;
-    }
-  }
 }
 
-@media screen and (max-width: 768px) {
-  .banner {
-    width: 300px;
-    margin: 10px auto;
-  }
+input[type=radio]:checked + label {
+  border: 2px solid green;
+}
 
-  .banner a img {
-    width: 300px;
-    height: auto;
-  }
-  .corner-icon, .corner {
-    display: none;
-  }
+input[type=radio] + label {
+  font-size: 20px;
+  float: left;
+  margin-right: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  user-select: none;
+  min-width: 60px;
+  min-height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-sizing: content-box;
+  background-position: center center;
+}
 
-  .mobile-menu {
-    display: block;
-  }
-  #web-submit {
-    display: none;
-  }
+.left-column {
+  width: 50%;
+  float: left;
+}
+
+.right-column {
+  width: 50%;
+  float: right;
+}
+
+body {
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+}
+
+.form-section-heading {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+.form-section {
+  margin-bottom: 30px;
 }
