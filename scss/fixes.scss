@@ -1,0 +1,27 @@
+body {
+	-webkit-tap-highlight-color:transparent;
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	padding-top: 0.1px; /* collapsing margins fix */
+  box-sizing: border-box;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/**Angular ngCloak **/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.arrow-wrapper, .preview-wrapper, .gallery-wrapper, .remaining, .mobile-menu {
+	//Make Element Non-Highlightable
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */
+}

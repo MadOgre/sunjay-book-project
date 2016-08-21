@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="left-column">
+		<form>
+			<div class="form-section form-section-type" ng-repeat="property in main.schema">
+			  <div class="form-section-heading">{{property.label}}</div>
+				<div class="radio-group" ng-repeat="value in property.values">
+					<input type="radio" name="{{property.property}}" value="{{value.id}}" id="{{property.property}}-{{value.id}}-radio"></input>
+					<label for="{{property.property}}-{{value.id}}-radio" style="background-image: url('{{value.label_img}}')">{{value.label_img ? "" : value.label}}</label>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</form>
+	</div>
+	<div class="right-column">
+		<img width="500" src="https://printasobject.files.wordpress.com/2012/07/frametransbground.png">
+	</div>
+	<div class="right-column"></div>
+	<div class="clearfix"></div>
+</div>
