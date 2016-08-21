@@ -1,85 +1,54 @@
 [
   {
-    "property": "type",
-    "label": "Type",
+    "image_type": "ADULT_FACE",
+    "image_type_label": "Adult Face",
     "values": [
       {
-        "id": 1,
-        "label": "Mom",
-        "label_img": null
+        "image_name": "ADULT_FACE_1",
+        "image_location": "https://s3.amazonaws.com/familystories/face_1.png"
       },
       {
-        "id": 2,
-        "label": "Dad",
-        "label_img": null
+        "image_name": "ADULT_FACE_2",
+        "image_location": "https://s3.amazonaws.com/familystories/face_2.png"
       },
       {
-        "id": 3,
-        "label": "Child",
-        "label_img": null
+        "image_name": "ADULT_FACE_3",
+        "image_location": "https://s3.amazonaws.com/familystories/face_3.png"
       }
     ]
   },
   {
-    "property": "skin",
-    "label": "Skin",
+    "image_type_label": "Adult Body",
     "values": [
       {
-        "id": 1,
-        "label": "1",
-        "label_img": null
+        "image_name": "ADULT_BODY_1",
+        "image_location": "https://s3.amazonaws.com/familystories/body_1.png"
       },
       {
-        "id": 2,
-        "label": "2",
-        "label_img": null
+        "image_name": "ADULT_BODY_2",
+        "image_location": "https://s3.amazonaws.com/familystories/body_2.png"
       },
       {
-        "id": 3,
-        "label": "3",
-        "label_img": "https://cdn0.iconfinder.com/data/icons/user-pictures/100/boy-2-128.png"
-      },
-      {
-        "id": 4,
-        "label": "4",
-        "label_img": null
-      },
-      {
-        "id": 5,
-        "label": "5",
-        "label_img": null
-      },
-      {
-        "id": 6,
-        "label": "6",
-        "label_img": null
+        "image_name": "ADULT_BODY_3",
+        "image_location": "https://s3.amazonaws.com/familystories/body_3.png"
       }
     ]
   },
   {
-    "property": "hair",
-    "label": "Hair",
+    "image_type_label": "Adult Eyes",
     "values": [
       {
-        "id": 1,
-        "label": "1",
-        "label_img": null
+        "image_name": "ADULT_EYES_1",
+        "image_location": "https://s3.amazonaws.com/familystories/eyes_1.png"
       },
       {
-        "id": 2,
-        "label": "2",
-        "label_img": null
+        "image_name": "ADULT_EYES_2",
+        "image_location": "https://s3.amazonaws.com/familystories/eyes_2.png"
       },
       {
-        "id": 3,
-        "label": "3",
-        "label_img": null
-      },
-      {
-        "id": 4,
-        "label": "4",
-        "label_img": null
+        "image_name": "ADULT_EYES_3",
+        "image_location": "https://s3.amazonaws.com/familystories/eyes_3.png"
       }
-    ]   
+    ]
   }
 ]
