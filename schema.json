@@ -4,50 +4,88 @@
     "image_type_label": "Adult Face",
     "values": [
       {
+        "image_id": "1",
         "image_name": "ADULT_FACE_1",
-        "image_location": "https://s3.amazonaws.com/familystories/face_1.png"
+        "image_location": "https://s3.amazonaws.com/familystories/face_1.png",
+        "image_x": "0",
+        "image_y": "0",
+        "image_category": "ADULT_MALE"
       },
       {
+        "image_id": "2",
         "image_name": "ADULT_FACE_2",
-        "image_location": "https://s3.amazonaws.com/familystories/face_2.png"
+        "image_location": "https://s3.amazonaws.com/familystories/face_2.png",
+        "image_x": "0",
+        "image_y": "0",
+        "image_category": "ADULT_MALE"
       },
       {
+        "image_id": "3",
         "image_name": "ADULT_FACE_3",
-        "image_location": "https://s3.amazonaws.com/familystories/face_3.png"
+        "image_location": "https://s3.amazonaws.com/familystories/face_3.png",
+        "image_x": "0",
+        "image_y": "0",
+        "image_category": "ADULT_MALE"
       }
     ]
   },
   {
+    "image_type": "ADULT_BODY",
     "image_type_label": "Adult Body",
     "values": [
       {
+        "image_id": "4",
         "image_name": "ADULT_BODY_1",
-        "image_location": "https://s3.amazonaws.com/familystories/body_1.png"
+        "image_location": "https://s3.amazonaws.com/familystories/body_1.png",
+        "image_x": "0",
+        "image_y": "0",
+        "image_category": "ADULT_MALE"
       },
       {
+        "image_id": "5",
         "image_name": "ADULT_BODY_2",
-        "image_location": "https://s3.amazonaws.com/familystories/body_2.png"
+        "image_location": "https://s3.amazonaws.com/familystories/body_2.png",
+        "image_x": "0",
+        "image_y": "0",
+        "image_category": "ADULT_MALE"
       },
       {
+        "image_id": "6",
         "image_name": "ADULT_BODY_3",
-        "image_location": "https://s3.amazonaws.com/familystories/body_3.png"
+        "image_location": "https://s3.amazonaws.com/familystories/body_3.png",
+        "image_x": "0",
+        "image_y": "0",
+        "image_category": "ADULT_MALE"
       }
     ]
   },
   {
+    "image_type": "ADULT_EYES",
     "image_type_label": "Adult Eyes",
     "values": [
       {
+        "image_id": "7",
         "image_name": "ADULT_EYES_1",
-        "image_location": "https://s3.amazonaws.com/familystories/eyes_1.png"
+        "image_location": "https://s3.amazonaws.com/familystories/eyes_1.png",
+        "image_x": "0",
+        "image_y": "0",
+        "image_category": "ADULT_MALE"
       },
       {
+        "image_id": "8",
         "image_name": "ADULT_EYES_2",
-        "image_location": "https://s3.amazonaws.com/familystories/eyes_2.png"
+        "image_location": "https://s3.amazonaws.com/familystories/eyes_2.png",
+        "image_x": "0",
+        "image_y": "0",
+        "image_category": "ADULT_MALE"
       },
       {
+        "image_id": "9",
         "image_name": "ADULT_EYES_3",
-        "image_location": "https://s3.amazonaws.com/familystories/eyes_3.png"
+        "image_location": "https://s3.amazonaws.com/familystories/eyes_3.png",
+        "image_x": "0",
+        "image_y": "0",
+        "image_category": "ADULT_MALE"
       }
     ]
   }
