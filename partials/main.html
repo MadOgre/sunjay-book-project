@@ -4,8 +4,8 @@
 			<div class="form-section form-section-type" ng-repeat="property in main.schema">
 			  <div class="form-section-heading">{{property.image_type_label}}</div>
 				<div class="radio-group" ng-repeat="value in property.values">
-					<input type="radio" name="{{property.property}}" value="{{value.id}}" id="{{property.property}}-{{value.id}}-radio"></input>
-					<label for="{{property.property}}-{{value.id}}-radio" style="background-image: url('{{value.label_img}}')">{{value.label_img ? "" : value.label}}</label>
+					<input type="radio" name="{{property.image_type}}" value="{{value.image_id}}" id="{{value.image_name}}-radio"></input>
+					<label for="{{value.image_name}}-radio" style="background-image: url('{{value.image_location}}')"></label>
 				</div>
 				<div class="clearfix"></div>
 			</div>
