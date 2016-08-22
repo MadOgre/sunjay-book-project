@@ -1,19 +1,28 @@
 <div class="container">
-	<div class="left-column">
-		<form>
-			<div class="form-section form-section-type" ng-repeat="property in main.schema">
+	<div class="left-column" ng-show="isLoaded">
+		<form ng-submit="postPerson()">
+			<div class="form-section form-section-type" ng-repeat="property in schema">
 			  <div class="form-section-heading">{{property.image_type_label}}</div>
-				<div class="radio-group" ng-repeat="value in property.values">
-					<input type="radio" name="{{property.image_type}}" value="{{value.image_id}}" id="{{value.image_name}}-radio"></input>
-					<label for="{{value.image_name}}-radio" style="background-image: url('{{value.image_location}}')"></label>
+				<div class="radio-group btn-group" data-toggle="buttons">
+					<label ng-click="switchImages(property.image_type, value.image_location, value.image_x, value_image_y)" class="btn btn-default" ng-class="$index===0 ? 'active first' : ''" ng-repeat="value in property.values">
+					  <input ng-checked="$index===0" type="radio" name="{{property.image_type}}" value="{{value.image_id}}" id="{{value.image_name}}-radio" ></input>
+						<img height="30" ng-src="{{value.image_location}}">
+					</label>
 				</div>
-				<div class="clearfix"></div>
 			</div>
+			<input type="submit" class="btn btn-primary"></input>
 		</form>
 	</div>
 	<div class="right-column">
-		<img width="500" src="https://printasobject.files.wordpress.com/2012/07/frametransbground.png">
+		<div class="images-container">
+<img width="500" src="https://printasobject.files.wordpress.com/2012/07/frametransbground.png">
+			<img class="img img-face" ng-src={{facepath}}>
+			<img class="img img-body" ng-src={{bodypath}}>
+			<img class="img img-eyes" ng-src={{eyespath}}>
+		</div>
+		
 	</div>
-	<div class="right-column"></div>
+	<div class="right-column">
+	</div>
 	<div class="clearfix"></div>
 </div>

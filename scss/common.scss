@@ -2,30 +2,30 @@
   text-align: center;
 }
 
-input[type=radio] {
-  display: none;
-}
+// input[type=radio] {
+//   display: none;
+// }
 
-input[type=radio]:checked + label {
-  border: 2px solid green;
-}
+// input[type=radio]:checked + label {
+//   border: 2px solid green;
+// }
 
-input[type=radio] + label {
-  font-size: 20px;
-  float: left;
-  margin-right: 10px;
-  border: 2px solid transparent;
-  cursor: pointer;
-  user-select: none;
-  min-width: 60px;
-  min-height: 40px;
-  text-align: center;
-  line-height: 40px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  box-sizing: content-box;
-  background-position: center center;
-}
+// input[type=radio] + label {
+//   font-size: 20px;
+//   float: left;
+//   margin-right: 10px;
+//   border: 2px solid transparent;
+//   cursor: pointer;
+//   user-select: none;
+//   min-width: 60px;
+//   min-height: 40px;
+//   text-align: center;
+//   line-height: 40px;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   box-sizing: content-box;
+//   background-position: center center;
+// }
 
 .left-column {
   width: 50%;
@@ -51,4 +51,28 @@ body {
 
 .form-section {
   margin-bottom: 30px;
+}
+
+.btn.active, .btn:active, .btn:focus, .btn.focus {
+  background-color: #333333 !important;
+}
+
+.images-container {
+  position: relative;
+  .img {
+    position: absolute;
+    border: 2px solid green;
+    left: 140px;
+  }
+  .img-face {
+    top: 100px;
+  }
+
+  .img-body {
+    top: 250px;
+  }
+
+  .img-eyes {
+    top: 400px;
+  }
 }
