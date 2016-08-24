@@ -1,13 +1,16 @@
 <div class="container">
-	<div class="left-column" ng-show="isLoaded">
-		<form ng-submit="postPerson()">
-			<div class="form-section form-section-type" ng-repeat="property in schema">
+	<div class="left-column" ng-show="main.isLoaded">
+		<form ng-submit="main.postPerson()">
+			<div class="form-section form-section-type" ng-repeat="property in main.schema">
 			  <div class="form-section-heading">{{property.image_type_label}}</div>
-				<div class="radio-group btn-group" data-toggle="buttons">
-					<label ng-click="switchImages(property.image_type, value.image_location, value.image_x, value_image_y)" class="btn btn-default" ng-class="$index===0 ? 'active first' : ''" ng-repeat="value in property.values">
-					  <input ng-checked="$index===0" type="radio" name="{{property.image_type}}" value="{{value.image_id}}" id="{{value.image_name}}-radio" ></input>
+				<div class="btn-group" data-toggle="buttons">
+				<label ng-repeat="value in property.values" class="btn btn-info" ng-model="main.results[$parent.$index]" uib-btn-radio="value.image_id">
+					<img height="30" ng-src="{{value.image_location}}">
+				</label>
+<!-- 					<label class="btn btn-default" ng-repeat="value in property.values">
+					  <input type="radio" name="{{property.image_type}}" ng-model="main.results[$parent.$index]" ng-value="value.image_id" />
 						<img height="30" ng-src="{{value.image_location}}">
-					</label>
+					</label> -->
 				</div>
 			</div>
 			<input type="submit" class="btn btn-primary"></input>
@@ -16,9 +19,9 @@
 	<div class="right-column">
 		<div class="images-container">
 <img width="500" src="https://printasobject.files.wordpress.com/2012/07/frametransbground.png">
-			<img class="img img-face" ng-src={{facepath}}>
+<!-- 			<img class="img img-face" ng-src={{facepath}}>
 			<img class="img img-body" ng-src={{bodypath}}>
-			<img class="img img-eyes" ng-src={{eyespath}}>
+			<img class="img img-eyes" ng-src={{eyespath}}> -->
 		</div>
 		
 	</div>

@@ -5,7 +5,8 @@
     $routeProvider
       .when("/", {
         templateUrl: "/partials/main.html",
-        controller: "Main"
+        controller: "Main",
+        controllerAs: "main"
       })
       .otherwise({
         redirectTo: '/'

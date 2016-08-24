@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular-ui-bootstrap": "^2.1.2"
   },
   "devDependencies": {
     "browser-sync": "^2.13.0",
