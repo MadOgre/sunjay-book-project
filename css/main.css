@@ -91,14 +91,11 @@ body {
   background-color: #333333 !important; }
 
 .images-container {
-  position: relative; }
+  position: absolute;
+  width: 330px;
+  height: 460px;
+  top: 76px;
+  right: 65px; }
   .images-container .img {
     position: absolute;
-    border: 2px solid green;
-    left: 140px; }
-  .images-container .img-face {
-    top: 100px; }
-  .images-container .img-body {
-    top: 250px; }
-  .images-container .img-eyes {
-    top: 400px; }
+    border: 2px solid green; }

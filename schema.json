@@ -7,8 +7,8 @@
         "image_id": "1",
         "image_name": "ADULT_FACE_1",
         "image_location": "https://s3.amazonaws.com/familystories/face_1.png",
-        "image_x": "0",
-        "image_y": "0",
+        "image_x": "20",
+        "image_y": "20",
         "image_category": "ADULT_MALE"
       },
       {

@@ -7,14 +7,29 @@
     vm.isLoaded = false;
     vm.schema = [];
     vm.results = ["4","1","7"];
+    vm.imageUrls = {};
+
+    vm.getImageById = function(id) {
+      return imageUrls[id];
+    };
     
     vm.getSchema = function() {
     	$http({
         method: 'GET',
-       // url: '/schema.json'
+        //url: '/schema.json'
         url: 'http://default-environment.ymuptkfrgv.us-west-2.elasticbeanstalk.com/getAdultMaleParts'
       }).then(function success(data){
       	vm.schema = data.data;
+        vm.schema.forEach(function(item){
+          item.values.forEach(function(value){
+            vm.imageUrls[value.image_id] = {
+              location: value.image_location,
+              image_x: value.image_x,
+              image_y: value.image_y
+            };
+          });
+        });
+        console.log(JSON.stringify(vm.imageUrls));
       	vm.isLoaded = true;
       }, function fail(data){
 

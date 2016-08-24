@@ -58,21 +58,13 @@ body {
 }
 
 .images-container {
-  position: relative;
+  position: absolute;
+  width: 330px;
+  height: 460px;
+  top: 76px;
+  right: 65px;
   .img {
     position: absolute;
     border: 2px solid green;
-    left: 140px;
-  }
-  .img-face {
-    top: 100px;
-  }
-
-  .img-body {
-    top: 250px;
-  }
-
-  .img-eyes {
-    top: 400px;
   }
 }
