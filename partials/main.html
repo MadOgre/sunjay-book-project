@@ -20,9 +20,9 @@
 
 		<img width="500" src="https://printasobject.files.wordpress.com/2012/07/frametransbground.png">
 		<div class="images-container">
- 			<img class="img img-face" ng-src="{{main.imageUrls[main.results[0]].location}}" style="top: {{main.imageUrls[main.results[0]].image_y}}px; left: {{main.imageUrls[main.results[0]].image_x}}px;">
-			<img class="img img-body" ng-src="{{main.imageUrls[main.results[1]].location}}" style="top: {{main.imageUrls[main.results[1]].image_y}}px; left: {{main.imageUrls[main.results[1]].image_x}}px;">
-			<img class="img img-eyes" ng-src="{{main.imageUrls[main.results[2]].location}}" style="top: {{main.imageUrls[main.results[2]].image_y}}px; left: {{main.imageUrls[main.results[2]].image_x}}px;">
+ 			<img class="img img-face" ng-src="{{main.imageUrls[main.results[0]].location}}" ng-style="{'top': main.imageUrls[main.results[0]].image_y + 'px', 'left': main.imageUrls[main.results[0]].image_x + 'px'}">
+			<img class="img img-body" ng-src="{{main.imageUrls[main.results[1]].location}}" ng-style="{'top': main.imageUrls[main.results[1]].image_y + 'px', 'left': main.imageUrls[main.results[1]].image_x + 'px'}">
+			<img class="img img-eyes" ng-src="{{main.imageUrls[main.results[2]].location}}" nng-style="{'top': main.imageUrls[main.results[2]].image_y + 'px', 'left': main.imageUrls[main.results[2]].image_x + 'px'}">
 		</div>
 		
 	</div>
