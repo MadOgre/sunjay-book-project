@@ -1,9 +1,10 @@
 <div class="container">
-	<div class="left-column" ng-show="main.isLoaded">
-		<form ng-submit="main.postPerson()">
+  <form ng-submit="main.postPerson()">
+		<div class="left-column" ng-show="main.isLoaded">
+
 		  <div class="form-group form-section">
 		    <label for="user-id-input" class="form-section-heading">User ID</label>
-		    <input type="text" class="form-control input-lg" id="user-id-input" placeholder="user001" ng-model="main.currentUser">
+		    <input type="text" class="form-control input-lg" id="user-id-input" placeholder="user001" ng-model="main.currentUser" required>
 		  </div>
 			<div class="form-section form-section-type" ng-repeat="property in main.schema">
 			  <div class="form-section-heading">{{property.image_type_label}}</div>
@@ -11,30 +12,30 @@
 				<label ng-repeat="value in property.values" class="btn btn-info" ng-model="main.results[$parent.$index]" uib-btn-radio="value.image_id">
 					<img height="30" ng-src="{{value.image_location}}">
 				</label>
-<!-- 					<label class="btn btn-default" ng-repeat="value in property.values">
+	<!-- 					<label class="btn btn-default" ng-repeat="value in property.values">
 					  <input type="radio" name="{{property.image_type}}" ng-model="main.results[$parent.$index]" ng-value="value.image_id" />
 						<img height="30" ng-src="{{value.image_location}}">
 					</label> -->
 				</div>
 			</div>
 			<input type="submit" class="btn btn-primary"></input>
-		</form>
-		{{main.results}}
-	</div>
-	<div class="right-column">
-
-		<img width="500" src="img/Pasted.png">
-		<div class="images-container">
-<!-- 		  <img class="img" src="https://placehold.it/500x800"> -->
-<img class="img" src="img/background.png">
-<img class="img" ng-repeat="value in main.results" ng-src="{{main.imageUrls[value].location}}">
-<!--  			<img class="img img-face" ng-src="{{main.imageUrls[main.results[0]].location}}" ng-style="{'top': main.imageUrls[main.results[0]].image_y + 'px', 'left': main.imageUrls[main.results[0]].image_x + 'px'}">
-			<img class="img img-body" ng-src="{{main.imageUrls[main.results[1]].location}}" ng-style="{'top': main.imageUrls[main.results[1]].image_y + 'px', 'left': main.imageUrls[main.results[1]].image_x + 'px'}">
-			<img class="img img-eyes" ng-src="{{main.imageUrls[main.results[2]].location}}" nng-style="{'top': main.imageUrls[main.results[2]].image_y + 'px', 'left': main.imageUrls[main.results[2]].image_x + 'px'}"> -->
+			{{main.results}}
 		</div>
-		
-	</div>
-	<div class="right-column">
-	</div>
-	<div class="clearfix"></div>
+		<div class="right-column">
+
+			<img width="500" src="img/Pasted.png">
+			<div class="images-container">
+	<!-- 		  <img class="img" src="https://placehold.it/500x800"> -->
+	<img class="img" src="img/background.png">
+	<img class="img" ng-repeat="value in main.results" ng-src="{{main.imageUrls[value].location}}">
+	<!--  			<img class="img img-face" ng-src="{{main.imageUrls[main.results[0]].location}}" ng-style="{'top': main.imageUrls[main.results[0]].image_y + 'px', 'left': main.imageUrls[main.results[0]].image_x + 'px'}">
+				<img class="img img-body" ng-src="{{main.imageUrls[main.results[1]].location}}" ng-style="{'top': main.imageUrls[main.results[1]].image_y + 'px', 'left': main.imageUrls[main.results[1]].image_x + 'px'}">
+				<img class="img img-eyes" ng-src="{{main.imageUrls[main.results[2]].location}}" nng-style="{'top': main.imageUrls[main.results[2]].image_y + 'px', 'left': main.imageUrls[main.results[2]].image_x + 'px'}"> -->
+			</div>
+			
+		</div>
+		<div class="right-column">
+		</div>
+		<div class="clearfix"></div>
+	</form>
 </div>
