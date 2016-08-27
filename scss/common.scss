@@ -35,6 +35,7 @@
 .right-column {
   width: 50%;
   float: right;
+  position: relative;
 }
 
 body {
@@ -59,12 +60,18 @@ body {
 
 .images-container {
   position: absolute;
-  width: 330px;
-  height: 460px;
-  top: 76px;
-  right: 65px;
+  width: 325px;
+  height: 520px;
+  top: 107px;
+  // right: 96px;
+  left: 88px;
   .img {
     position: absolute;
     border: 2px solid green;
+    width: 100%;
   }
+}
+
+#user-id-input {
+  width: 260px;
 }

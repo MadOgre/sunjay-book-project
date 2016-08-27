@@ -6,8 +6,9 @@
     var vm = this;
     vm.isLoaded = false;
     vm.schema = [];
-    vm.results = ["4","1","7"];
+    vm.results = ["25","31","-1", "-2", "28", "7"];
     vm.imageUrls = {};
+    vm.currentUser = "";
 
     vm.getImageById = function(id) {
       return imageUrls[id];
@@ -17,7 +18,8 @@
     	$http({
         method: 'GET',
         //url: '/schema.json'
-        url: 'http://default-environment.ymuptkfrgv.us-west-2.elasticbeanstalk.com/getAdultMaleParts'
+        // url: 'http://default-environment.ymuptkfrgv.us-west-2.elasticbeanstalk.com/getAdultMaleParts'
+        url: 'http://178.62.255.163:8080/FamilyStoryWebService_26AUG2016/getAdultMaleParts'
       }).then(function success(data){
       	vm.schema = data.data;
         vm.schema.forEach(function(item){
@@ -38,7 +40,7 @@
     vm.getSchema();
     vm.postPerson = function() {
       var response = {
-        user_id: "test_user1",
+        user_id: vm.currentUser,
         avatar_name: "test_avatar1",
         image_id_list: vm.results.map(function(item){return parseInt(item);})
       }
@@ -49,7 +51,8 @@
       console.log("About to send response: " + JSON.stringify(response));
       $http({
         method: 'POST',
-        url: 'http://default-environment.ymuptkfrgv.us-west-2.elasticbeanstalk.com/setUserSelection',
+        // url: 'http://default-environment.ymuptkfrgv.us-west-2.elasticbeanstalk.com/setUserSelection',
+        url: 'http://178.62.255.163:8080/FamilyStoryWebService_26AUG2016/setUserSelection',
         headers: {
           "Content-Type": "application/json"
         },
