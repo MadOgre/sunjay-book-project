@@ -25,9 +25,12 @@
 
 			<img width="500" src="img/Pasted.png">
 			<div class="images-container">
-	<!-- 		  <img class="img" src="https://placehold.it/500x800"> -->
-	<img class="img" src="img/background.png">
-	<img class="img" ng-repeat="value in main.results[main.currentAvatar]" ng-src="{{main.imageUrls[value].location}}">
+				<img class="img" src="img/background.png">
+				<img class="img" ng-repeat="value in main.results[main.currentAvatar]" ng-src="{{main.imageUrls[value].location}}">
+				<div class="img arrows-container">
+					<div class="arrow arrow-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+					<div class="arrow arrow-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+				</div>
 			</div>
 			<div class="form-group form-section">
 		    <label for="avatar-name-input" class="form-section-heading">Avatar Name</label>

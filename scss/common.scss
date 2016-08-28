@@ -67,7 +67,6 @@ body {
   left: 88px;
   .img {
     position: absolute;
-    border: 2px solid green;
     width: 100%;
   }
 }
@@ -75,3 +74,28 @@ body {
 #user-id-input {
   width: 260px;
 }
+
+.arrows-container{
+  height: 516px;
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 258px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  height: 80px;
+  i {
+    line-height: 80px;
+    font-size: 60px;
+  }
+ } 
+
+ .arrow-left {
+  left: 0px;
+ }
+
+ .arrow-right {
+  right: 0px;
+ }
