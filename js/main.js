@@ -26,7 +26,8 @@
         method: 'GET',
         //url: '/schema.json'
         // url: 'http://default-environment.ymuptkfrgv.us-west-2.elasticbeanstalk.com/getAdultMaleParts'
-        url: 'http://178.62.255.163:8080/FamilyStoryWebService/getAdultMaleParts'
+        //url: 'http://178.62.255.163:8080/FamilyStoryWebService/getAdultMaleParts'
+        url: 'http://localhost:3000/getAdultMaleParts'
       }).then(function success(data){
       	vm.schema = data.data;
         vm.schema.forEach(function(item){
@@ -67,16 +68,58 @@
       }).then(function(data){
         if (data.data.result = "SUCCESS") {
           alert("Saved!");
-          vm.results.push(Array.prototype.slice.call(vm.currentAvatar.images));
-          vm.avatarNames.push(vm.currentAvatar.name);
-          vm.currentAvatar.name = "";
-          vm.currentAvatar.images = Array.prototype.slice.call(vm.avatarDefaults);
-          vm.currentAvatarIndex++;
+
+          //if avatar exists
+          // var index = vm.results.find(function(item){
+          //   return item.name === vm.currentAvatar.name;
+          // });
+          // if (index === -1) {
+
+          // }
+          if (vm.currentAvatarIndex >= vm.avatarNames.length) {
+            alert("avatar is new");
+            //avatar is new
+            vm.results.push(Array.prototype.slice.call(vm.currentAvatar.images));
+            vm.avatarNames.push(vm.currentAvatar.name);
+            vm.currentAvatar.name = "";
+            vm.currentAvatar.images = Array.prototype.slice.call(vm.avatarDefaults);
+            vm.currentAvatarIndex++;
+          } else {
+            alert("avatar is old");
+            vm.results[vm.currentAvatarIndex] = Array.prototype.slice.call(vm.currentAvatar.images);
+            vm.avatarNames[vm.currentAvatarIndex] = vm.currentAvatar.name;
+            vm.currentAvatarIndex++;
+            if (vm.currentAvatarIndex >= vm.avatarNames.length) {
+              vm.currentAvatar.name = "";
+              vm.currentAvatar.images = Array.prototype.slice.call(vm.avatarDefaults);              
+            } else {
+              vm.currentAvatar.images = Array.prototype.slice.call(vm.results[vm.currentAvatarIndex]);
+              vm.currentAvatar.name = vm.avatarNames[vm.currentAvatarIndex];
+            }
+          }
+
+
         }
         console.log(data);
         console.log(vm.avatarNames);
         console.log(vm.results);
       });
+    }
+
+    vm.nextAvatar = function() {
+      if (vm.currentAvatarIndex < vm.avatarNames.length - 1) {
+        vm.currentAvatarIndex++;
+        vm.currentAvatar.images = vm.results[vm.currentAvatarIndex];
+        vm.currentAvatar.name = vm.avatarNames[vm.currentAvatarIndex]
+      }
+    }
+
+    vm.prevAvatar = function() {
+      if (vm.currentAvatarIndex > 0) {
+        vm.currentAvatarIndex--;
+        vm.currentAvatar.images = vm.results[vm.currentAvatarIndex];
+        vm.currentAvatar.name = vm.avatarNames[vm.currentAvatarIndex]
+      }
     }
 
     // vm.switchImages = function(image_type, location, image_x, image_y) {
