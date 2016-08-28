@@ -6,11 +6,16 @@
     var vm = this;
     vm.isLoaded = false;
     vm.schema = [];
+    vm.avatarNames = [];
     vm.avatarDefaults = ["25","31","-1", "-2", "28", "7"];
     vm.results = [["25","31","-1", "-2", "28", "7"]];
+    vm.currentAvatar = {
+      name: "",
+      images: ["25","31","-1", "-2", "28", "7"]
+    }
     vm.imageUrls = {};
     vm.currentUser = "";
-    vm.currentAvatar = 0;
+    vm.currentAvatarIndex = 0;
     vm.avatarName = "";
 
     vm.getImageById = function(id) {
